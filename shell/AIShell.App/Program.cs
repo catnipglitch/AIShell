@@ -23,7 +23,8 @@ internal class Program
         // changes to the existing public APIs. We will need to evaluate whether we want to
         // keep depending on it when this project moves beyond a prototype.
 
-        Console.OutputEncoding = Encoding.Default;
+        Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+        Console.OutputEncoding = Encoding.UTF8;
         Argument<string> query = new("query", getDefaultValue: () => null, "The query term used to get response from AI.");
         Option<string> channel = new("--channel", "A named pipe used to setup communication between aish and the command-line shell.");
         Option<FileInfo> shellWrapper = new("--shell-wrapper", "Path to the configuration file to wrap AIShell as a different application.");

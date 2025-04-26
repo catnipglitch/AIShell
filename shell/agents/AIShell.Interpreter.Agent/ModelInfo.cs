@@ -22,6 +22,7 @@ internal class ModelInfo
         s_modelMap = new(StringComparer.OrdinalIgnoreCase)
         {
             ["gpt-4o"]        = new(tokenLimit: 128_000, encoding: Gpt4oEncoding),
+            ["4o-mini"]   = new(tokenLimit: 128_000, encoding: Gpt4oEncoding),
             ["gpt-4"]         = new(tokenLimit: 8_192),
             ["gpt-4-32k"]     = new(tokenLimit: 32_768),
             ["gpt-4-turbo"]   = new(tokenLimit: 128_000),
